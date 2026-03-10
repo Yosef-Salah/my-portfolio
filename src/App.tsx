@@ -5,30 +5,19 @@ import {
   Mail, 
   ExternalLink, 
   Code, 
-  User, 
   Briefcase, 
   ChevronDown, 
   Moon, 
   Sun,
-  Terminal,
-  Palette,
-  Globe,
   Send,
   Smartphone,
   Database,
   Server,
   Layers,
-  Camera,
   Menu,
   X
 } from 'lucide-react';
 
-/**
- * CUSTOMIZE YOUR DATA HERE
- * ------------------------------------------------------------------
- * Update these objects to reflect your personal information, skills,
- * and projects.
- */
 
 const PERSONAL_INFO = {
   name: "Yosef Salah",
@@ -39,8 +28,7 @@ const PERSONAL_INFO = {
   // INSTRUCTIONS FOR PERSONAL PHOTO:
   // 1. For a live website, move your photo (e.g., 'me.jpg') into your project's 'public' folder.
   // 2. Then set the line below to: photo: "/me.jpg"
-  // 3. For now, you can use the upload button on the website preview to test your look.
-  photo:"src/assets/my image.jpeg",
+  photo: "https://avatars.githubusercontent.com/u/259169804?v=4",
   
   socials: {
     github: "https://github.com/Yosef-Salah",
@@ -61,7 +49,7 @@ const PROJECTS = [
     title: "AI Medical App",
     description: "A full-featured cross-platform mobile app built with Flutter. Handles real-time order tracking, payment integration, and push notifications.",
     tags: ["Flutter", "Dart", "Firebase", "Stripe API"],
-    link: "#",
+    link: "https://github.com/Yosef-Salah",
     color: "bg-orange-500"
   },
   {
@@ -69,7 +57,7 @@ const PROJECTS = [
     title: "Equipment Management System",
     description: "Scalable backend architecture for a social media platform. Handles auth, media processing, and data aggregation using Dockerized services.",
     tags: ["Spring Boot", "Python", "Figma", "React.js"],
-    link: "#",
+    link: "https://github.com/Yosef-Salah",
     color: "bg-blue-600"
   },
 ];
@@ -104,15 +92,6 @@ export default function App() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
-  
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setProfileImage(imageUrl);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -280,25 +259,11 @@ export default function App() {
             <div className="relative order-1 md:order-2">
               <div className={`aspect-square rounded-2xl overflow-hidden relative z-10 ${darkMode ? 'bg-slate-800' : 'bg-slate-100'} flex items-center justify-center group`}>
                 <img 
-                  src=src/assets/my image.jpeg
+                  src={PERSONAL_INFO.photo} 
                   alt={PERSONAL_INFO.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent mix-blend-overlay pointer-events-none"></div>
-                
-                {/* Image Upload Overlay */}
-                <label className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer z-20">
-                  <div className="text-white text-center">
-                    <Camera size={32} className="mx-auto mb-2" />
-                    <span className="text-sm font-medium">Change Photo</span>
-                  </div>
-                  <input 
-                    type="file" 
-                    accept="image/*" 
-                    className="hidden" 
-                    onChange={handleImageUpload}
-                  />
-                </label>
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-indigo-500 rounded-full blur-2xl opacity-40"></div>
