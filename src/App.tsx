@@ -40,7 +40,7 @@ const PERSONAL_INFO = {
   // 1. For a live website, move your photo (e.g., 'me.jpg') into your project's 'public' folder.
   // 2. Then set the line below to: photo: "/me.jpg"
   // 3. For now, you can use the upload button on the website preview to test your look.
-  photo: "/my .jpeg",
+  photo: "src/assets/my image.jpeg",
   
   socials: {
     github: "https://github.com/Yosef-Salah",
@@ -280,7 +280,7 @@ export default function App() {
             <div className="relative order-1 md:order-2">
               <div className={`aspect-square rounded-2xl overflow-hidden relative z-10 ${darkMode ? 'bg-slate-800' : 'bg-slate-100'} flex items-center justify-center group`}>
                 <img 
-                  src={profileImage} 
+                  src={src/assets/my image.jpeg} 
                   alt={PERSONAL_INFO.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
