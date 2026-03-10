@@ -105,8 +105,6 @@ export default function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
   
-  // State to handle the dynamic photo upload for preview purposes
-  const [profileImage, setProfileImage] = useState(PERSONAL_INFO.photo);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
