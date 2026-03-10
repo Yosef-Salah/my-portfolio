@@ -40,7 +40,7 @@ const PERSONAL_INFO = {
   // 1. For a live website, move your photo (e.g., 'me.jpg') into your project's 'public' folder.
   // 2. Then set the line below to: photo: "/me.jpg"
   // 3. For now, you can use the upload button on the website preview to test your look.
-  photo: "F:\CV\my-portfolio\public",
+  photo: ""F:/CV/my-portfolio/src/assets/WhatsApp Image 2026-02-12 at 9.39.59 PM (1).jpeg"",
   
   socials: {
     github: "https://github.com/Yosef-Salah",
