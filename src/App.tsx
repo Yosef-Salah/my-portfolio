@@ -28,7 +28,7 @@ const PERSONAL_INFO = {
   // INSTRUCTIONS FOR PERSONAL PHOTO:
   // 1. For a live website, move your photo (e.g., 'me.jpg') into your project's 'public' folder.
   // 2. Then set the line below to: photo: "/me.jpg"
-  photo: "https://avatars.githubusercontent.com/u/259169804?v=4",
+  photo: "public/my image.jpeg",
   
   socials: {
     github: "https://github.com/Yosef-Salah",
