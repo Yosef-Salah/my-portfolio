@@ -32,6 +32,7 @@ const PERSONAL_INFO = {
   
   socials: {
     github: "https://github.com/Yosef-Salah",
+    
     linkedin: "https://www.linkedin.com/in/yosef-salah-elskily/",
   }
 };
